@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5f5f5f"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mainRel"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#fff"
+        android:elevation="10dp"
+        android:transitionName="@string/transtrans">
+
+        <ImageView
+            android:id="@+id/ttimg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/com_facebook_tooltip_blue_topnub"
+            android:transitionName="timgTrans" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/ttamt"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/ttimg"
+                android:fontFamily="sans-serif"
+                android:textAlignment="center"
+                android:textSize="55sp"
+                android:textStyle="bold|italic"
+                android:transitionName="tamtTrans" />
+
+            <TextView
+                android:id="@+id/ttdate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/ttamt"
+                android:layout_marginTop="45dp"
+                android:fontFamily="sans-serif"
+                android:text="01/01/01"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#f0f0f0"
+        android:clickable="true"
+        android:elevation="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/editDescLL">
+
+            <TextView
+                android:id="@+id/ttdesc"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="TestDesc"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                android:transitionName="tdescTrans" />
+
+            <ImageView
+                android:id="@+id/editDesc"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="120dp"
+                android:src="@drawable/ic_mode_edit_black_24dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etdesc"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif"
+            android:text="1001"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/doneDesc"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="290dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_done_black_48dp"
+            android:visibility="gone" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#f0f0f0"
+        android:clickable="true"
+        android:elevation="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="7dp">
+
+        <TextView
+            android:id="@+id/ttmsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="5dp"
+            android:text="View SMS"
+            android:textSize="15dp" />
+    </android.support.v7.widget.CardView>
+</LinearLayout>

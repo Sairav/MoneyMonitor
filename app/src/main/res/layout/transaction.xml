@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rell"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:transitionName="@string/transtrans">
+
+
+    <ImageView
+        android:id="@+id/timg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/com_facebook_tooltip_blue_topnub"
+
+        android:transitionName="timgTrans" />
+
+    <TextView
+        android:id="@+id/tdesc"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/tdate"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/timg"
+        android:fontFamily="sans-serif"
+        android:text="TestDesc"
+        android:maxLines="2"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:transitionName="tdescTrans" />
+
+    <TextView
+        android:id="@+id/tamt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="225dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/timg"
+        android:fontFamily="sans-serif"
+        android:text="1001"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:transitionName="tamtTrans" />
+
+
+    <TextView
+        android:id="@+id/tdate"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/timg"
+        android:fontFamily="sans-serif"
+        android:text="01/01/01"
+        android:textSize="15dp"
+        android:textStyle="bold|italic" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f0f0f2"
+
+        />
+
+</RelativeLayout>
+
+    <!--
+    <ImageView
+    android:id="@+id/tedit"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center_vertical"
+    android:layout_marginLeft="240dp"
+    android:layout_toRightOf="@id/timg"
+
+    android:scaleX=".5"
+    android:scaleY=".5"
+    android:src="@drawable/ic_mode_edit_black_24dp" />
+    -->

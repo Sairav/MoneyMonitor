@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/transMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:fitsSystemWindows="true"
+                android:paddingLeft="12dp"
+                app:contentScrim="?android:attr/colorPrimary"
+                app:layout_scrollFlags="exitUntilCollapsed">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbarAct"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    app:layout_scrollFlags="scroll">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <!--button was here-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/monthSelLay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/monthButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:textColor="#000"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_toRightOf="@id/monthButton"
+                                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/syncLay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_marginTop="4dp"
+
+                                    android:layout_toLeftOf="@+id/syncButton"
+                                    android:src="@drawable/ic_cached_black_48dp" />
+
+                                <TextView
+                                    android:id="@+id/syncButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_marginTop="4dp"
+                                    android:text="SyncUp"
+                                    android:textAlignment="center"
+                                    android:textColor="#000" />
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                        <!--switch was here-->
+
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+            <FrameLayout
+                android:id="@+id/searchFrame"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.SearchView
+                    android:id="@+id/searchTrans"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#f0f0f0"
+                    android:queryHint="Start Typing Description"
+                    android:theme="@style/MySearchViewStyle"
+                    app:tabMode="scrollable" />
+
+            </FrameLayout>
+
+            <!--need to change the background as an object oval prbbly-->
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/trans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_black_24dp"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
+
+</FrameLayout><!--<FrameLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:layout_margin="20dp"--><!--android:layout_gravity="center_horizontal"--><!--android:elevation="15dp"--><!--android:background="#f0f0f0">-->
+
+    <!--
+
+    <Switch
+    android:id="@+id/switch1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_toEndOf="@+id/monthButton"
+    android:layout_toRightOf="@id/monthButton"
+    android:text="OnlyCredit" />-->
+
+
+    <!--
+
+    <Button
+    android:id="@+id/monthButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layerlist"
+    android:text="December"
+    android:textAlignment="center"
+    android:textColor="#000" />-->
